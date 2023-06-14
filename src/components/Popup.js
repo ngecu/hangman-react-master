@@ -11,12 +11,12 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
   }
   else if (checkWin(correctLetters, wrongLetters, selectedWord,time) === 'lose') {
     finalMessage = 'Unfortunately, you lost. 😕';
-    finalMessageRevealWord = `...the word was: ${selectedWord}`;
+    finalMessageRevealWord = `...the word was: .....`;
   }
 
   else if (checkWin(correctLetters, wrongLetters, selectedWord,time) === 'timeup') {
     finalMessage = 'Unfortunately, Time is Up. 😕';
-    finalMessageRevealWord = `...the word was: ${selectedWord}`;
+    finalMessageRevealWord = `...the word was: ...`;
   }
 
   useEffect(() => {
