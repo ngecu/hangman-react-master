@@ -2,11 +2,10 @@ import React, { useEffect } from 'react';
 import { checkWin } from '../helpers/helpers';
 import DemoLine from './GraphComponent';
 
-const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain,time,bestScore,score }) => {
+const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain,time}) => {
   let finalMessage = '';
   let finalMessageRevealWord = '';
-  
-console.log(bestScore,score)
+
   if (checkWin(correctLetters, wrongLetters, selectedWord,time) === 'win') {
     finalMessage = 'Congratulations! You won! 😃';
   }
@@ -32,10 +31,11 @@ console.log(bestScore,score)
         <h2>{finalMessage}</h2>
         <h3>{finalMessageRevealWord}</h3>
 
-        <DemoLine bestScore={bestScore} score={score} />
-        {finalMessage !== '' && (
-          <button onClick={playAgain}>Play Again</button>
-        )}
+       
+       
+         {finalMessage == 'Congratulations! You won! 😃' ? (
+          <button onClick={playAgain}>Next Round</button>
+        ): <button onClick={playAgain}>Play Again</button>}
       </div>
     </div>
   );

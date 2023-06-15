@@ -3,17 +3,33 @@ import ReactDOM from 'react-dom';
 import { Column } from '@ant-design/plots';
 
 const DemoLine = ({bestScore,score},props) => {
-
-  console.log("proopsd",props)
+  console.log(props)
   const data = [
+
     {
-      type: 'Score',
-      sales: Number(score),
+      type: '生鲜水果',
+      sales: 61,
     },
     {
-      type: 'Best Score',
-      sales: Number(bestScore),
-    }
+      type: '美容洗护',
+      sales: 145,
+    },
+    {
+      type: '母婴用品',
+      sales: 48,
+    },
+    {
+      type: '进口食品',
+      sales: 38,
+    },
+    {
+      type: '食品饮料',
+      sales: 38,
+    },
+    {
+      type: '家庭清洁',
+      sales: 38,
+    },
   ];
   const config = {
     data,

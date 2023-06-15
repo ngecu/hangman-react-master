@@ -200,9 +200,20 @@ const letterTrimmed = letter.trim().toLowerCase();
     }
   }, [score, bestScore]);
 
+
+  const renderRoundScores = () => {
+    return roundScores.map((score, index) => (
+      <div key={index}>Round {index + 1}: {score}</div>
+    ));
+  };
+
   return (
     <>
       <Header />
+
+      <div className="round-scores">
+        {renderRoundScores()}
+      </div>
       <Notification showNotification={showNotification} />
       <div className="timer">Time Remaining: {timeRemaining}s</div>
       <div className="score">Score: {score}</div>
@@ -241,8 +252,6 @@ const letterTrimmed = letter.trim().toLowerCase();
         setPlayable={setPlayable}
         playAgain={playAgain}
         time={timeRemaining}
-        score={score}
-        bestScore={bestScore}
         
       />
     </>
