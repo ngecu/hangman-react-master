@@ -7,7 +7,6 @@ export function showNotification(setter) {
 
 export function checkWin(correct, wrong, word,time) {
   let status = 'win';
-  console.log("time is ",time)
   // Check for win
   word.split('').forEach(letter => {
     if(!correct.includes(letter)){

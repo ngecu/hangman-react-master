@@ -8,7 +8,6 @@ const Word = ({ selectedWord, correctLetters }) => {
         return (
           <span className="letter" key={i}>
             {correctLetters.includes(letter) ? letter : ''}
-            
           </span>
         )
       })}
